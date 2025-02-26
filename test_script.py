@@ -3,7 +3,7 @@ import cv2
 import os
 
 def test_image_loading():
-    images = ['plaksha_Faculty.jpg', 'Dr_Shashi_Tharoor.jpg']
+    images = ['Plaksha_Faculty.jpg', 'Dr_Shashi_Tharoor.jpg']
     for img in images:
         if not os.path.exists(img):
             print(f"{img} not found")
