@@ -23,10 +23,8 @@ jobs:
         run: |
           pip install notebook jupyter nbconvert wandb opencv-python-headless numpy matplotlib scikit-learn scipy
 
-      - name: Set W&B API Key
-        env:
-            WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
-        run: wandb login $WANDB_API_KEY
+      - name: Setup Weights & Biases
+        run: echo "WANDB_API_KEY=${{ secrets.WANDB_API_KEY }}" >> $GITHUB_ENV
 
       - name: Run Jupyter Notebook
         run: |
